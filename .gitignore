@@ -1,0 +1,14 @@
+# Never commit game files or decompiled code.
+
+# Game-made files, so OpenKH's git update (fetch + hard reset) never meets them:
+# - the DLL's first-launch build and its stamp (docs/openkh-github-install.md);
+/generated/
+# - the asset step's outputs when they sit in the mod's own folder (a hand-made mod folder, the
+#   owner's manual workflow: docs/kh1-recom-assets.md), and the DLL copied next to them.
+/PLAYER/
+/ENEMY/
+/raw/
+/kh1-*.json
+/kh1-*.bin
+/kh1-menu-sounds-preview/
+/kh1-recom.dll

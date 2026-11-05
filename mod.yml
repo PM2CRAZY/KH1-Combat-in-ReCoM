@@ -1,0 +1,20 @@
+title: KH1 Combat in Re:Chain of Memories
+originalAuthor: PM
+game: Recom
+description: >-
+  Kingdom Hearts 1 Final Mix's combat for Sora in Kingdom Hearts Re:Chain of Memories (PC, Steam,
+  KINGDOM HEARTS HD 1.5+2.5 ReMIX), built into Re:CoM's own systems. Needs KH1 Final Mix installed
+  in the same collection, and Panacea. On the first launch (and after an update of the mod or the
+  game) the mod builds its KH1 files from your own KH1 and Re:CoM files: a window shows the
+  progress and the game starts by itself when it is done (a minute or two). No game files are
+  shipped. Settings: the camp menu's KH1 entry, or kh1-recom.ini in the game folder; the log is
+  kh1-recom.log there.
+# The DLL is the build bot's (.github/workflows/build.yml commits openkh/kh1-recom.dll on every
+# push to testing). Panacea loads <mod_path>/recom/dll/*.dll. The game-made files are not listed
+# here: the DLL builds them on first launch into generated/ (git-ignored) and copies them into
+# Panacea's folder at each start (docs/openkh-github-install.md).
+assets:
+- name: dll/kh1-recom.dll
+  method: copy
+  source:
+  - name: openkh/kh1-recom.dll
